@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff343a49</color>
+    <color name="colorPrimaryDark">#ff2a2e3a</color>
+    <color name="colorAccent">#ffffffff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="lightblack">#66000000</color>
+    <color name="textColorPrimary">#ffffffff</color>
+    <color name="textColorSecondary">#aaa</color>
+    <color name="windowBackground">#ff242833</color>
+    <color name="colorForeground">#10ffffff</color>
+
+    <color name="item_icon_checked">#ffffffff</color>
+    <color name="item_icon_normal">#ff343a49</color>
+</resources>

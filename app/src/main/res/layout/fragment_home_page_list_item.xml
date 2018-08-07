@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_item_spacing_half"
+    android:paddingLeft="@dimen/list_item_spacing"
+    android:paddingRight="@dimen/list_item_spacing"
+    android:paddingTop="@dimen/list_item_spacing_half">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/envelopePic"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                tools:text="WanAndroid Java 客户端" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_black_bg"
+            android:lines="1"
+            android:text="xx作者"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/superChapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border_black_bg"
+            android:lines="1"
+            android:text="常用控件 / Fragment"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/publishTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:text="一天前"
+            android:textSize="10sp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/collectImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:tint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

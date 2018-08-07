@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:descendantFocusability="blocksDescendants"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/list_item_spacing"
+        android:text="标题"
+        android:drawableRight="@drawable/arrow_right"
+        android:paddingRight="@dimen/list_item_spacing"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>
