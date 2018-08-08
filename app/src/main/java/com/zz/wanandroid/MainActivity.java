@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: ");
         if (savedInstanceState==null){
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             recreate();
@@ -94,7 +96,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         viewPager.setOffscreenPageLimit(4);
         viewPager.addOnPageChangeListener(this);
     }
-
 
 
     @Override

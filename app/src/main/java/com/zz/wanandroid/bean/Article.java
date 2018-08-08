@@ -1,12 +1,14 @@
 package com.zz.wanandroid.bean;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author zhaozhuo
  * @date 2018/7/10 15:22
  */
+@Entity
 public class Article implements Serializable{
     private static final long serialVersionUID = 1L;
     /**
@@ -34,7 +36,8 @@ public class Article implements Serializable{
      * visible : 1
      * zan : 0
      */
-
+    @PrimaryKey
+    private int id;
     private String apkLink;
     private String author;
     private int chapterId;
@@ -44,7 +47,6 @@ public class Article implements Serializable{
     private String desc;
     private String envelopePic;
     private boolean fresh;
-    private int id;
     private String link;
     private String niceDate;
     private String origin;
@@ -59,8 +61,6 @@ public class Article implements Serializable{
     private int zan;
 
     private int originId =-1;
-    private List<TagsBean> tags;
-
     public String getApkLink() {
         return apkLink;
     }
@@ -237,13 +237,6 @@ public class Article implements Serializable{
         this.zan = zan;
     }
 
-    public List<TagsBean> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<TagsBean> tags) {
-        this.tags = tags;
-    }
 
     public int getOriginId() {
         return originId;
@@ -253,29 +246,4 @@ public class Article implements Serializable{
         this.originId = originId;
     }
 
-    public static class TagsBean implements Serializable{
-        /**
-         * name : 项目
-         * url : /project/list/1?cid=382
-         */
-
-        private String name;
-        private String url;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getUrl() {
-            return url;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
-        }
-    }
 }

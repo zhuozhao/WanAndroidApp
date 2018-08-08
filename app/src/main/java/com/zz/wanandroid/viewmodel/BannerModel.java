@@ -51,7 +51,9 @@ public class BannerModel extends ViewModel {
     /**
      * 更新数据
      */
-    private void updateDate() {
+    public void updateDate() {
+
+        getBanners();
 
         WanAndroidService.getWanAndroidApi().banner()
                 .subscribeOn(Schedulers.io())
@@ -66,20 +68,17 @@ public class BannerModel extends ViewModel {
                     protected void onSuccees(final Result<List<Banner>> result) {
 
                         listMutableLiveData.postValue(result.getData());
-                        //AppDatabase.getInstance().bannerDao().insertOrUpdateBanners(result.getData());
+                        AppDatabase.getInstance().bannerDao().insertOrUpdateBanners(result.getData());
                     }
                 });
 
     }
 
-    public void getBanners() {
-
-       // List<Banner> banners = AppDatabase.getInstance().bannerDao().getBanners();
-
-//        if(banners!=null){
-//            listMutableLiveData.postValue(banners);
-//        }
-        updateDate();
+    private void getBanners() {
+        List<Banner> banners = AppDatabase.getInstance().bannerDao().getBanners();
+        if(banners!=null){
+            listMutableLiveData.postValue(banners);
+        }
     }
 
 }

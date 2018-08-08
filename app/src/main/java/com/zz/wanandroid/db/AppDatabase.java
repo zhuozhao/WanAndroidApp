@@ -9,8 +9,11 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.zz.wanandroid.app.MyApplication;
+import com.zz.wanandroid.bean.Article;
 import com.zz.wanandroid.bean.Banner;
 import com.zz.wanandroid.bean.SearchHistory;
+import com.zz.wanandroid.bean.TagsBean;
+import com.zz.wanandroid.db.dao.ArticleDao;
 import com.zz.wanandroid.db.dao.BannerDao;
 import com.zz.wanandroid.db.dao.SearchHistoryDao;
 
@@ -19,7 +22,7 @@ import com.zz.wanandroid.db.dao.SearchHistoryDao;
  * @date 2018/7/5 15:10
  */
 
-@Database( entities =  {Banner.class, SearchHistory.class},version = 2)
+@Database( entities =  {Banner.class, SearchHistory.class, Article.class, TagsBean.class},version = 3)
 public abstract class AppDatabase extends RoomDatabase{
 
     private static final String TAG = "AppDatabase";
@@ -65,6 +68,10 @@ public abstract class AppDatabase extends RoomDatabase{
      * @return
      */
     public abstract SearchHistoryDao searchHistoryDao();
+
+
+
+    public  abstract ArticleDao articleDao();
 
 
 }

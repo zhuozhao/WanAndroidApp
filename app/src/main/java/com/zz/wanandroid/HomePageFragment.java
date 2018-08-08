@@ -155,7 +155,7 @@ public class HomePageFragment extends Fragment {
             public void onRefresh(RefreshLayout refreshlayout) {
                 currentPage =0;
                 articleViewModel.getArticle(0);
-                bannerModel.getBanners();
+                bannerModel.updateDate();
             }
         });
 

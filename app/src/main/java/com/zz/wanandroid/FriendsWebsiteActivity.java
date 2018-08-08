@@ -46,6 +46,7 @@ public class FriendsWebsiteActivity extends AppCompatActivity {
         });
 
         friendViewModel.getFriendsWebsite();
+
     }
 
 
